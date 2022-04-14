@@ -9,6 +9,13 @@ module.exports = {
   getOne,
   create,
   deleteOne,
+  update,
+};
+
+function update(id, skill) {
+  id = parseInt(id);
+  const updatedSkill = skills.find((skill) => skill.id === id);
+  Object.assign(updatedSkill, skill);
 };
 
 function deleteOne(id) {
