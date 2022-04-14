@@ -16,5 +16,7 @@ router.get('/new', skillsCtrl.new);
 router.get('/:id', skillsCtrl.show);
 // PUT /skills/:id create functionality
 router.post('/' , skillsCtrl.create);
+// DELETE /skills/:id
+router.delete('/:id', skillsCtrl.delete);
 
 module.exports = router;
