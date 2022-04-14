@@ -3,8 +3,20 @@ const { render } = require('../server');
 
 module.exports = {
   index,
-  show
+  show,
+  create,
+  new: newSkill,
 };
+
+
+function create(req, res) {
+  Skill.create(req.body);
+  res.redirect('/skills')
+};
+
+function newSkill(req, res) {
+  res.render('skills/new');
+}
 
 function show(req, res) {
   // Access all route params using req.params (object)

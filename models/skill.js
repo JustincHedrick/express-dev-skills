@@ -6,8 +6,15 @@ const skills = [
 
 module.exports = {
   getAll,
-  getOne
+  getOne,
+  create,
 };
+
+function create(skill) {
+  skill.id = 1;
+  skill.quality = false;
+  skills.push(skill);
+}
 
 function getOne(id) {
   id = parseInt(id);
