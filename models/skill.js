@@ -20,12 +20,12 @@ function update(id, skill) {
 
 function deleteOne(id) {
   id = parseInt(id);
-  const idx = skills.find((skill) => skill.id === id);
+  const idx = skills.findIndex(skill => skill.id === id);
   skills.splice(idx, 1);
 };
 
 function create(skill) {
-  skill.id = 1;
+  skill.id = Math.floor(1000 + Math.random() * 9000);
   skill.quality = false;
   skills.push(skill);
 };
